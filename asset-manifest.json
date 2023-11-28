@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/feriadosChile/static/css/main.bdb74e0f.css",
-    "main.js": "/feriadosChile/static/js/main.d44b4fc2.js",
+    "main.js": "/feriadosChile/static/js/main.89e14352.js",
     "static/media/beach.png": "/feriadosChile/static/media/beach.e5c91be3f072fb766397.png",
     "index.html": "/feriadosChile/index.html",
     "main.bdb74e0f.css.map": "/feriadosChile/static/css/main.bdb74e0f.css.map",
-    "main.d44b4fc2.js.map": "/feriadosChile/static/js/main.d44b4fc2.js.map"
+    "main.89e14352.js.map": "/feriadosChile/static/js/main.89e14352.js.map"
   },
   "entrypoints": [
     "static/css/main.bdb74e0f.css",
-    "static/js/main.d44b4fc2.js"
+    "static/js/main.89e14352.js"
   ]
 }
