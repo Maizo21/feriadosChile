@@ -2,6 +2,7 @@
   "name": "feriados",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://api.victorsanmartin.com/",
   "homepage": "https://Maizo21.github.io/feriadosChile",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
