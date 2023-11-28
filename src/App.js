@@ -9,7 +9,6 @@ function App() {
   let anio = new Date().getFullYear();
   
   useEffect(() => {
-  let anio = new Date().getFullYear();
   let headers = new Headers();
 
   headers.append('Content-Type', 'application/json');
@@ -18,14 +17,14 @@ function App() {
   headers.append('Access-Control-Allow-Origin', '*');
   headers.append('Access-Control-Allow-Credentials', 'true');
 
-    fetch(`https://apis.digital.gob.cl/fl/feriados/${anio}`,{
+    fetch(`https://api.victorsanmartin.com/feriados/en.json`,{
       method : "GET",
       mode: 'cors',
       headers: headers
     })
       .then(data => {
         console.log(data);
-        setFeriadosData(data);
+        setFeriadosData(data.data);
       })
       .catch(error => console.log(error));
   }

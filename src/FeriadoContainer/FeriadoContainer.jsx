@@ -3,15 +3,16 @@ import './FeriadoContainer.css'
 import Feriado from '../Feriado/Feriado'
 
 const FeriadoContainer = ({feriadosData}) => {
+  console.log(feriadosData)
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
     const proximosFeriados = feriadosData.filter((feriado) => {
-      const fechaFeriado = new Date(feriado.fecha);
+      const fechaFeriado = new Date(feriado.date);
       return fechaFeriado >= today;
     });
   
-    proximosFeriados.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+    proximosFeriados.sort((a, b) => new Date(a.date) - new Date(b.date));
   
     let proximoFeriado = null;
 

@@ -16,11 +16,11 @@ const Feriado = ({feriado, index, proximoFeriado = null}) => {
 
   return (
     <>
-      <li key={index} className='feriado-item' style={proximoFeriado && proximoFeriado.nombre === feriado.nombre ? styleProximoFeriado : null}>
-        <p>{feriado.nombre}</p>
-        <p>{feriado.fecha}</p>
-        <p>{feriado.tipo} <span>{feriado.tipo ==='Civil' ? '⚖' : '⛪'}</span></p>
-        <p style={feriado.irrenunciable === '1' ? styleIrrenunciable : null}>{feriado.irrenunciable === '1' ? 'Irrenunciable📣' : null }</p>
+      <li key={index} className='feriado-item' style={proximoFeriado && proximoFeriado.title === feriado.title ? styleProximoFeriado : null}>
+        <p>{feriado.title}</p>
+        <p>{feriado.date}</p>
+        <p>{feriado.type} <span>{feriado.type ==='Civil' ? '⚖' : '⛪'}</span></p>
+        {feriado.extra.includes('Irrenunciable') ? <p style={styleIrrenunciable}>Irrenunciable 📣</p> : null}
       </li>
     </>
   )
