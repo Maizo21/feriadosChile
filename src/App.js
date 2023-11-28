@@ -28,8 +28,6 @@ function App() {
   }
 
     fetch(`https://api.victorsanmartin.com/feriados/en.json`,{
-      method : "GET",
-      mode: 'cors',
       headers: headers
     })
       .then(data => {
