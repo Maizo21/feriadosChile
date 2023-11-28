@@ -11,8 +11,7 @@ function App() {
   let anio = new Date().getFullYear();
   
   useEffect(() => {
-    let anio = new Date().getFullYear();
-    axios.get(`https://apis.digital.gob.cl/fl/feriados/${anio}`)
+    axios.get('https://api.victorsanmartin.com/feriados/en.json')
       .then(response => {
         // Actualiza el estado con los datos obtenidos de la API
         const {data} = response.data
