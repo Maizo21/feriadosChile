@@ -1,0 +1,37 @@
+.feriado-item{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 35px;
+    grid-template-columns: repeat(4, 100px);
+    position: relative;
+    width: 100%;
+}
+
+.feriado-item:nth-child(odd){
+    background-color: #BDDAEC;
+    color: #000;
+}
+
+.feriado-item:nth-child(even){
+    background-color: #000;
+    border: 1px solid #BDDAEC;
+    color: #BDDAEC;
+}
+
+.feriado-item:first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+.feriado-item:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 830px) {
+    .feriado-item{
+        gap: 10px;
+        padding: 10px 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

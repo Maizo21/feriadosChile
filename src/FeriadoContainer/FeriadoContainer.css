@@ -1,0 +1,18 @@
+.feriado-container{
+    display: grid;
+    width: 100%;
+    place-items: center;
+    margin: 30px auto;
+}
+
+.feriado-container ul{
+    list-style: none;
+    display: grid;
+    margin: 10px auto;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 830px) {
+    .feriado-container{
+        width: 95%;;
+    }
+}
