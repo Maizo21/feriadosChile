@@ -10,8 +10,12 @@ function App() {
   
   useEffect(() => {
   let anio = new Date().getFullYear();
+  var headers = {}
     fetch(`https://apis.digital.gob.cl/fl/feriados/${anio}`,{
-      'Access-Control-Allow-Headers': 'Access-Control-Allow-Origin'
+      'Access-Control-Allow-Headers': '*',
+      method : "GET",
+      mode: 'cors',
+      headers: headers
     })
       .then(data => {
         console.log(data);
