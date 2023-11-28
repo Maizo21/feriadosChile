@@ -3,20 +3,21 @@ import './App.css';
 import Header from './Header/Header';
 import FeriadoContainer from './FeriadoContainer/FeriadoContainer';
 import Footer from './Footer/Footer';
+import axios from 'axios';
 
 function App() {
   const [feriadosData, setFeriadosData] = useState([]);
   let anio = new Date().getFullYear();
   
-  useEffect(() => {
+/*   useEffect(() => {
   let headers = new Headers();
 
 
-/*   headers.append('Content-Type', 'application/json');
+  headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
 
   headers.append('Access-Control-Allow-Origin', '*');
-  headers.append('Access-Control-Allow-Credentials', 'true'); */
+  headers.append('Access-Control-Allow-Credentials', 'true'); 
 
   headers ={
     'Content-Type': 'application/json',
@@ -38,7 +39,19 @@ function App() {
       })
       .catch(error => console.log(error));
   }
-  , []);
+  , []); */
+
+  useEffect(() => {
+    axios.get("https://api.victorsanmartin.com/feriados/en.json")
+      .then(response => {
+        // Actualiza el estado con los datos obtenidos de la API
+        const {data} = response.data
+        setFeriadosData(data);
+      })
+      .catch(error => {
+        console.error("Error al obtener datos de la API", error);
+      });
+  }, [])
   return (
     <>
       <Header year={anio} /> 
