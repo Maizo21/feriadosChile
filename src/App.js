@@ -12,7 +12,6 @@ function App() {
   let anio = new Date().getFullYear();
   var headers = {}
     fetch(`https://apis.digital.gob.cl/fl/feriados/${anio}`,{
-      'Access-Control-Allow-Headers': '*',
       method : "GET",
       mode: 'cors',
       headers: headers
