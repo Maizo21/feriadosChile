@@ -10,11 +10,9 @@ function App() {
   
   useEffect(() => {
   let anio = new Date().getFullYear();
-    fetch(`https://apis.digital.gob.cl/fl/feriados/${anio}`)
-      .then(response => {
-        console.log(response);
-        response.json()
-      })
+    fetch(`https://apis.digital.gob.cl/fl/feriados/${anio}`,{
+      'Access-Control-Allow-Headers': 'Access-Control-Allow-Origin'
+    })
       .then(data => {
         console.log(data);
         setFeriadosData(data);
