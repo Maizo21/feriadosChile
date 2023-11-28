@@ -11,11 +11,21 @@ function App() {
   useEffect(() => {
   let headers = new Headers();
 
-  headers.append('Content-Type', 'application/json');
+
+/*   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
 
   headers.append('Access-Control-Allow-Origin', '*');
-  headers.append('Access-Control-Allow-Credentials', 'true');
+  headers.append('Access-Control-Allow-Credentials', 'true'); */
+
+  headers ={
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': 'true',
+    'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  }
 
     fetch(`https://api.victorsanmartin.com/feriados/en.json`,{
       method : "GET",
